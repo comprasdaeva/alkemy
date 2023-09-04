@@ -1,0 +1,30 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name= "home"),
+    path('empleados/nuevo/',views.registrar_empleado,name="registrar_empleado"),
+    path('empleados/activar/<int:id_empleado>',views.activar_empleado, name="activar_empleado"),
+    path('empleados/listado/', views.listado_empleados, name="listado_empleados"),
+    path('empleados/modificar/<int:id_empleado>', views.modificar_empleado, name='modificar_empleado'),
+    path('empleados/desactivar/<int:id_empleado>',views.desactivar_empleado, name="desactivar_empleado"),
+    path('clientes/listado/', views.listado_clientes, name="listado_clientes"),
+    path('clientes/nuevo/',views.registrar_cliente,name="registrar_cliente"),
+    path('clientes/desactivar/<int:id_cliente>',views.desactivar_cliente,name="desactivar_cliente"),
+    path('clientes/activar/<int:id_cliente>',views.activar_cliente,name="activar_cliente"),
+    path('clientes/modificar/<int:id_cliente>',views.modificar_cliente,name="modificar_cliente"),
+    path('coordinadores/modificar/<int:id_coordinador>',views.modificar_coordinador,name="modificar_coordinador"),
+    path('coordinadores/activar/<int:id_coordinador>',views.activar_coordinador,name="activar_coordinador"),
+    path('coordinadores/desactivar/<int:id_coordinador>',views.desactivar_coordinador,name="desactivar_coordinador"),
+    path('coordinadores/listado/', views.listado_coordinadores, name="listado_coordinadores"),
+    path('coordinadores/nuevo/',views.registrar_coordinador,name="registrar_coordinador"),
+    path('nuevo/', views.registrar_reserva_de_servicio,name="registrar_reserva_de_servicio"),
+    path('modificar/<int:id_reserva_servicio>', views.modificar_reserva_de_servicio,name="modificar_reserva_de_servicio"),
+    path('eliminar/<int:id_reserva_servicio>', views.eliminar_reserva_de_servicio,name="eliminar_reserva_de_servicio"),
+    path('listado/', views.listado_reservas_de_servicios,name="listado_reservas_de_servicios"),
+    path('servicios/nuevo/',views.registrar_servicio,name="registrar_servicio"),
+    path('servicios/modificar/<int:id_servicio>',views.modificar_servicio,name="modificar_servicio"),
+    path('servicios/desactivar/<int:id_servicio>',views.desactivar_servicio,name="desactivar_servicio"),
+    path('servicios/activar/<int:id_servicio>',views.activar_servicio,name="activar_servicio"),
+    path('servicios/listado/', views.listado_servicios, name="listado_servicios"),
+]

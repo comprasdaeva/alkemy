@@ -1,0 +1,59 @@
+{% load static %}
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<!-- Custom ICO -->
+<link rel="shortcut icon" href="{% static 'img/resetImage.ico' %}" type="image/x-icon"> 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+<title>La Reserva</title>
+
+<div class="container">
+    <img src="{% static 'img/BANNER-01.png' %}" alt="" width="100%" id="fondo">
+    <div class="banner">
+        
+    </div>
+    <div class="head">
+        <div class="logo">            
+            <img src="{% static 'img/LaReserva.png' %}" alt="" id="logo">
+        </div>
+        <div class="nav">            
+            <a href="{% url 'listado_empleados' %}">EMPLEADOS</a>
+            <a href="{% url 'listado_coordinadores' %}">COORDINADORES</a>
+            <a href="{% url 'listado_clientes' %}">CLIENTES</a>
+            <a href="{% url 'listado_servicios' %}">SERVICIOS</a>
+            <a href="{% url 'listado_reservas_de_servicios' %}">RESERVAS DE SERVICIOS</a>  
+        </div>
+    </div>
+    
+    <div class="info-devs">
+        <div class="dev-box">
+            <h3 class="titulo">Bootcamp Alkemy</h3>
+            <ul>
+                <li>Curso: Django</li>
+                <li>Comision: 3</li>
+                <li>Squad: 1</li>
+                <li>Caso de negocio: 1</li>
+                <li>Mentor: Rodrigo Valladare</li>            
+            </ul>
+        </div>
+        <div class="dev-box">
+            <h3 class="titulo">Integrantes</h3>
+            <ul>
+                <li>Hector Mauricio Mamani <a href="https://github.com/Ichexpa" target="_blank"><img src="{% static 'img/github.png' %}" alt=""></a></li>
+                <li>Matias Erique Sanchez De Bock <a href="https://github.com/MDeBock" target="_blank"><img src="{% static 'img/github.png' %}" alt=""></a> <a href="https://www.linkedin.com/in/matias-sanchez-de-bock" target="_blank"><img src="{% static 'img/linkedin.png' %}" alt=""></a></li>
+                <img src="" alt="">                   
+            </ul>
+        </div>
+        <div class="dev-box">
+            <h3 class="titulo">Tecnologías utilizadas</h3>
+            <ul>
+                <li>Django 4.2.1</li>
+                <li>Python 3.10.7</li>
+                <li>DB Sqlite</li>
+                <li>Html 5</li>
+                <li>Bootstrap 5.2</li>            
+            </ul>
+        </div>
+    </div>
+</div>
