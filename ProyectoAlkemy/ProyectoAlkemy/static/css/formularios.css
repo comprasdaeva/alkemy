@@ -12,7 +12,7 @@
     height: 100%;
 }
 
-.head{
+.top{
     position: absolute;
     display: flex; 
     width: 100%;
@@ -27,11 +27,11 @@
     width: 80%;
 }
 
-.nav{
+.navegador{
     margin: auto;    
 }
 
-.nav a{
+.navegador a{
     color: black;
     font-size: 1em;
     font-weight: 800;
@@ -40,54 +40,152 @@
     margin: 0 25px;
 }
 
-.container-form{
-    width: 40%;
-    margin: 0 32%;
+.base-formulario{
     position: absolute;
-    top: 200;
+    top: 150;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;    
     background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 2rem; 
-    border: 2px solid black;
-}
-
-.container-form h2{    
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.container-form form{
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;    
-}
-
-.container-form form .input-box{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.container-form form .input-box input,
-.container-form form textarea{
-    width: 97%;
-    padding: .5rem;
-    font-size: 1rem;    
-    border-radius: .8rem;
-    margin: .5rem 0;
-}
-
-.container-form form .input-box input{
     width: 50%;
-    border: 1.5px solid black;
+    margin: 0 25%;
+    padding: 0 0 1%;
+    border-radius: 2rem;
+    border: 1px solid black;
 }
 
-.container-form form textarea{
-    resize: none;
+.titulo{
+    margin: 2%;
+    width: 100%;
+    
 }
 
-.container-form form .boton{
-    display: flex;
-    justify-content: space-between;
-    margin: .5rem 1.5rem;    
+.titulo h2{
+    text-align: center;
+    margin-bottom: 0 !important;    
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;  
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;  
+    margin: 0 0 10px;  
+}
+
+.boton{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, .15);
+    border: 1px solid rgba(17, 58, 77, 0.802) ;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    padding: 5px;
+}
+
+.boton span{
+    position: relative;
+    z-index: 2;
+}
+
+.boton a{
+    color: black;
+    font-size: 1em;
+    font-weight: 800;
+    text-decoration: none;    
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.boton:after{
+    position: absolute;
+    content: "";
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(6, 228, 39, 0.6);
+    transition: all .35s;
+}
+
+.boton-servicios::after{
+    background-color: rgba(127, 59, 204, 0.6);;   
+    
+}
+
+.boton:hover{
+    color: white;
+
+}
+
+.boton-servicios:hover{
+    color: black; 
+}
+
+.boton:hover:after{
+    width: 100%;
+}
+
+.cancelar{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, .15);
+    border: 1px solid rgba(17, 58, 77, 0.802) ;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    padding: 5px;
+}
+
+.cancelar span{
+    position: relative;
+    z-index: 2;
+}
+.cancelar{
+    color: black;
+    font-size: 1em;
+    font-weight: 800;
+    text-decoration: none;    
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cancelar:after{
+    position: absolute;
+    content: "";
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(228, 6, 6, 0.6);
+    transition: all .35s;
+    
+}
+
+.cancelar:hover{
+    color: white;
+
+}
+
+.cancelar:hover:after{
+    width: 100%;
+}
+
+input{
+    border: 1px solid black !important
+}
+
+.form-select{
+    border: 1px solid black !important
 }
 
